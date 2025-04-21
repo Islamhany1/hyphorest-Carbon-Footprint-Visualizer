@@ -29,7 +29,7 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-teal-300 via-blue-200 to-indigo-300 flex items-center justify-center p-6">
+    <div className="min-h-screen flex items-center justify-center p-6 bg-gray-50">
       <motion.div
         initial={{ opacity: 0, scale: 0.95 }}
         animate={{ opacity: 1, scale: 1 }}
@@ -38,24 +38,17 @@ export default function App() {
       >
         {/* Header */}
         <header className="text-center mt-4">
-          <h1 className="text-5xl font-extrabold mb-2 flex items-center justify-center">
-            {/* Emoji in normal color */}
-            <span className="mr-3">🌍</span>
-
-            {/* Only the letters get the gradient mask */}
-            <span className="bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 to-teal-400">
-              Carbon Footprint Visualizer
-            </span>
+          <h1 className="text-4xl font-bold mb-2">
+            🌍 Carbon Footprint Visualiser
           </h1>
-
-          <p className="text-gray-800/90 text-lg">
-            See how your daily habits stack up against other countries & global
-            averages.
+          <p className="text-gray-600">
+            See how your daily habits stack up against other countries &amp;
+            global averages.
           </p>
         </header>
 
         {/* Input form and pie chart */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch ">
           <motion.section
             whileHover={{ scale: 1.02 }}
             className="bg-white rounded-2xl shadow-lg p-8 w-full max-w-xl h-full"
@@ -66,7 +59,7 @@ export default function App() {
           {breakdown && (
             <motion.section
               whileHover={{ scale: 1.02 }}
-              className="bg-white rounded-2xl shadow-lg p-8 w-full h-full flex items-center justify-center"
+              className="bg-white rounded-2xl shadow-lg p-8 w-full h-full flex items-center justify-center "
             >
               <EmissionPie data={breakdown} />
             </motion.section>

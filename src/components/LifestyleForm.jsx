@@ -56,7 +56,7 @@ export default function LifestyleForm({ onCalculate }) {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-6">
+    <form onSubmit={handleSubmit} className="space-y-6 ">
       <CommuteInput
         transport={transport}
         setTransport={setTransport}
