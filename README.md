@@ -14,4 +14,7 @@ If you are developing a production application, we recommend using TypeScript wi
 # to run the app
 
 npm i
+
+#
+
 npm run dev
